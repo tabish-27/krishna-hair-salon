@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate">
   <meta name="theme-color" content="#0b0b0c">
   <meta name="description" content="कृष्णा हेयर सेलून, पुरुषों के हेयरकट, फेड, दाढ़ी सेटिंग और शेव के लिए आपका लोकल बार्बर। Krishna Hair Salon for men's haircut, fade, beard styling and grooming.">
   <meta property="og:type" content="business.business">
@@ -78,6 +79,10 @@
     .brand-name small { display: block; color: #c8c5bc; font-family: var(--english); font-size: 10px; font-weight: 500; }
     .top-phone { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 13px; border: 1px solid rgba(245,183,0,.7); color: var(--gold-bright); font-family: var(--english); font-size: 13px; font-weight: 700; white-space: nowrap; }
     .top-phone span { margin-right: 7px; font-size: 16px; }
+    .topbar-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 10px; }
+    .language-switch { display: inline-flex; min-height: 42px; padding: 3px; border: 1px solid rgba(255,255,255,.26); background: rgba(11,11,12,.72); }
+    .language-switch button { min-width: 43px; padding: 0 8px; border: 0; background: transparent; color: #d1cec6; cursor: pointer; font-size: 12px; font-weight: 600; }
+    .language-switch button[aria-pressed="true"] { background: var(--gold); color: #17130a; }
 
     .hero { position: relative; display: flex; min-height: 710px; align-items: center; overflow: hidden; isolation: isolate; background: #131313; }
     .hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% 38%; }
@@ -196,12 +201,33 @@
     }
     @media (max-width: 380px) {
       .wrap, .hero-content { width: min(calc(100% - 32px), var(--page-width)); }
-      .topbar-inner { min-height: 66px; }
-      .top-phone { min-height: 42px; padding-inline: 9px; font-size: 12px; }
+      .topbar-inner { min-height: 66px; gap: 7px; }
+      .brand { gap: 7px; }
+      .brand-mark { flex-basis: 36px; width: 36px; height: 36px; font-size: 20px; }
+      .brand-name { font-size: 12px; }
+      .brand-name small { font-size: 8px; }
+      .topbar-actions { gap: 6px; }
+      .language-switch { min-height: 40px; }
+      .language-switch button { min-width: 37px; padding-inline: 5px; font-size: 11px; }
+      .top-phone { width: 40px; min-height: 40px; padding: 0; }
+      .top-phone span { margin: 0; }
+      .top-phone [data-phone-display] { display: none; }
       .hero { min-height: 690px; }
       .hero-actions .button { flex: 1 1 100%; }
       .section { padding: 63px 0; }
       .service-card { padding: 14px 12px; }
+    }
+    @media (max-width: 440px) {
+      .topbar-inner { gap: 7px; }
+      .brand { gap: 7px; }
+      .brand-name { font-size: 12px; }
+      .brand-name small { font-size: 8px; }
+      .topbar-actions { gap: 6px; }
+      .language-switch { min-height: 40px; }
+      .language-switch button { min-width: 37px; padding-inline: 5px; font-size: 11px; }
+      .top-phone { width: 40px; min-height: 40px; padding: 0; }
+      .top-phone span { margin: 0; }
+      .top-phone [data-phone-display] { display: none; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
@@ -212,11 +238,17 @@
 <body class="no-js">
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#home" aria-label="कृष्णा हेयर सेलून, होम">
+      <a class="brand" href="#home" data-i18n-aria="homeAria" aria-label="कृष्णा हेयर सेलून, होम">
         <span class="brand-mark" aria-hidden="true">✂</span>
-        <span class="brand-name">कृष्णा हेयर सेलून<small>KRISHNA HAIR SALON</small></span>
+        <span class="brand-name"><span data-salon-name>कृष्णा हेयर सेलून</span><small>KRISHNA HAIR SALON</small></span>
       </a>
-      <a class="top-phone" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span><span data-phone-display>88009 66984</span></a>
+      <div class="topbar-actions">
+        <div class="language-switch" role="group" aria-label="Choose page language / पेज की भाषा चुनें">
+          <button type="button" data-language="hi" aria-pressed="true">हिन्दी</button>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="top-phone" data-call data-i18n-aria="topCallAria" href="tel:+918800966984" aria-label="अभी कृष्णा हेयर सेलून को कॉल करें"><span aria-hidden="true">☎</span><span data-phone-display>88009 66984</span></a>
+      </div>
     </div>
   </header>
 
@@ -224,22 +256,22 @@
     <section class="hero" id="home" aria-labelledby="hero-title">
       <img class="hero-photo" data-hero-image alt="बार्बर ग्राहक के बालों को नया फेड स्टाइल दे रहा है" width="1800" height="1200" fetchpriority="high" onerror="this.style.display='none'">
       <div class="hero-content">
-        <div class="hero-label"><i aria-hidden="true"></i><span>MEN'S GROOMING · आपका लोकल बार्बर</span></div>
-        <h1 id="hero-title">कृष्णा हेयर सेलून<small>Krishna Hair Salon</small></h1>
-        <p class="hero-copy"><strong>स्टाइल जो आपकी पहचान बने।</strong><br>साफ़ कटिंग, शानदार फेड और दाढ़ी की बढ़िया सेटिंग।</p>
+        <div class="hero-label"><i aria-hidden="true"></i><span data-i18n="heroLabel">MEN'S GROOMING · आपका लोकल बार्बर</span></div>
+        <h1 id="hero-title" data-salon-name>कृष्णा हेयर सेलून</h1>
+        <p class="hero-copy"><strong data-i18n="tagline">स्टाइल जो आपकी पहचान बने।</strong><br><span data-i18n="heroCopy">साफ़ कटिंग, शानदार फेड और दाढ़ी की बढ़िया सेटिंग।</span></p>
         <div class="hero-actions">
-          <a class="button button-gold" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span> अभी कॉल करें</a>
-          <a class="button button-ghost" data-whatsapp href="https://wa.me/918800966984" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> WhatsApp पर बुक करें</a>
+          <a class="button button-gold" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span> <span data-i18n="callNow">अभी कॉल करें</span></a>
+          <a class="button button-ghost" data-whatsapp href="https://wa.me/918800966984" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> <span data-i18n="bookWhatsApp">WhatsApp पर बुक करें</span></a>
         </div>
-        <div class="hero-note"><b>✦</b> बढ़िया स्टाइल <span></span> साफ़-सुथरे टूल <span></span> सही दाम</div>
+        <div class="hero-note"><b>✦</b> <span data-i18n="heroPointOne">बढ़िया स्टाइल</span> <span></span> <span data-i18n="heroPointTwo">साफ़-सुथरे टूल</span> <span></span> <span data-i18n="heroPointThree">सही दाम</span></div>
       </div>
     </section>
 
     <section class="section" id="services" aria-labelledby="services-title">
       <div class="wrap reveal">
         <div class="section-heading">
-          <div><p class="eyebrow">THE MENU</p><h2 id="services-title">सेवाएँ और दाम <span>· Services & Prices</span></h2></div>
-          <p class="english">सीधी बात, साफ़ रेट।</p>
+          <div><p class="eyebrow" data-i18n="servicesEyebrow">THE MENU</p><h2 id="services-title"><span data-i18n="servicesTitle">सेवाएँ और दाम</span></h2></div>
+          <p data-i18n="servicesLead">सीधी बात, साफ़ रेट।</p>
         </div>
         <div class="service-grid" data-services></div>
       </div>
@@ -248,8 +280,8 @@
     <section class="section" id="gallery" aria-labelledby="gallery-title">
       <div class="wrap reveal">
         <div class="section-heading">
-          <div><p class="eyebrow">FRESH CUTS</p><h2 id="gallery-title">हमारे स्टाइल <span>· The Looks</span></h2></div>
-          <p>अपनी पसंद का स्टाइल चुनें, या बार्बर से सलाह लें।</p>
+          <div><p class="eyebrow" data-i18n="galleryEyebrow">FRESH CUTS</p><h2 id="gallery-title"><span data-i18n="galleryTitle">हमारे स्टाइल</span></h2></div>
+          <p data-i18n="galleryLead">अपनी पसंद का स्टाइल चुनें, या बार्बर से सलाह लें।</p>
         </div>
         <div class="gallery" data-gallery></div>
       </div>
@@ -258,13 +290,13 @@
     <section class="section" id="why-us" aria-labelledby="why-title">
       <div class="wrap reveal">
         <div class="section-heading">
-          <div><p class="eyebrow">GOOD HANDS, GOOD STYLE</p><h2 id="why-title">क्यों आएँ हमारे पास? <span>· Why Us</span></h2></div>
+          <div><p class="eyebrow" data-i18n="whyEyebrow">GOOD HANDS, GOOD STYLE</p><h2 id="why-title"><span data-i18n="whyTitle">क्यों आएँ हमारे पास?</span></h2></div>
         </div>
         <div class="why-grid">
-          <article class="why-item"><span class="why-icon" aria-hidden="true">✂</span><div><h3>अनुभवी बार्बर</h3><p>आपके चेहरे और पसंद के हिसाब से कटिंग।</p></div></article>
-          <article class="why-item"><span class="why-icon" aria-hidden="true">✦</span><div><h3>साफ़-सुथरे टूल</h3><p>हर ग्राहक के लिए साफ़ और तैयार औज़ार।</p></div></article>
-          <article class="why-item"><span class="why-icon" aria-hidden="true">◈</span><div><h3>नए ट्रेंडिंग स्टाइल</h3><p>फेड से लेकर क्लासिक कट तक, आपकी पसंद।</p></div></article>
-          <article class="why-item"><span class="why-icon" aria-hidden="true">₹</span><div><h3>बजट में बढ़िया लुक</h3><p>पैसे के हिसाब से साफ़ और सही दाम।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">✂</span><div><h3 data-i18n="whyExperience">अनुभवी बार्बर</h3><p data-i18n="whyExperienceText">आपके चेहरे और पसंद के हिसाब से कटिंग।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">✦</span><div><h3 data-i18n="whyHygiene">साफ़-सुथरे टूल</h3><p data-i18n="whyHygieneText">हर ग्राहक के लिए साफ़ और तैयार औज़ार।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">◈</span><div><h3 data-i18n="whyTrends">नए ट्रेंडिंग स्टाइल</h3><p data-i18n="whyTrendsText">फेड से लेकर क्लासिक कट तक, आपकी पसंद।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">₹</span><div><h3 data-i18n="whyPrices">बजट में बढ़िया लुक</h3><p data-i18n="whyPricesText">पैसे के हिसाब से साफ़ और सही दाम।</p></div></article>
         </div>
       </div>
     </section>
@@ -272,16 +304,16 @@
     <section class="section" id="reviews" aria-labelledby="reviews-title">
       <div class="wrap reveal">
         <div class="section-heading review-heading">
-          <div><p class="eyebrow">KIND WORDS</p><h2 id="reviews-title">ग्राहक क्या कहते हैं <span>· Reviews</span></h2></div>
-          <div class="carousel-controls" aria-label="रिव्यू स्क्रॉल करें">
-            <button type="button" data-review-prev aria-label="पिछले रिव्यू">‹</button>
-            <button type="button" data-review-next aria-label="अगले रिव्यू">›</button>
+          <div><p class="eyebrow" data-i18n="reviewsEyebrow">KIND WORDS</p><h2 id="reviews-title"><span data-i18n="reviewsTitle">ग्राहक क्या कहते हैं</span></h2></div>
+          <div class="carousel-controls" data-i18n-aria="reviewsControls" aria-label="रिव्यू स्क्रॉल करें">
+            <button type="button" data-review-prev data-i18n-aria="previousReview" aria-label="पिछले रिव्यू">‹</button>
+            <button type="button" data-review-next data-i18n-aria="nextReview" aria-label="अगले रिव्यू">›</button>
           </div>
         </div>
-        <div class="reviews" data-reviews tabindex="0" aria-label="ग्राहकों के रिव्यू, साइड में स्वाइप करें">
-          <article class="review-card"><div class="stars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote>“कटिंग बहुत बढ़िया हुई। बार्बर ने मेरी पसंद समझकर साफ़ फेड दिया।”</blockquote><footer><span class="review-avatar" aria-hidden="true">A</span><span>अमन <span class="english">· Sample review</span></span></footer></article>
-          <article class="review-card"><div class="stars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote>“दाढ़ी की शेप एकदम सही की और टूल भी साफ़ थे। फिर आऊँगा।”</blockquote><footer><span class="review-avatar" aria-hidden="true">R</span><span>रोहित <span class="english">· Sample review</span></span></footer></article>
-          <article class="review-card"><div class="stars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote>“अच्छी सर्विस, सही दाम और बढ़िया स्टाइल। लोकल में अच्छी जगह है।”</blockquote><footer><span class="review-avatar" aria-hidden="true">V</span><span>विकास <span class="english">· Sample review</span></span></footer></article>
+        <div class="reviews" data-reviews tabindex="0" data-i18n-aria="reviewsList" aria-label="ग्राहकों के रिव्यू, साइड में स्वाइप करें">
+          <article class="review-card"><div class="stars" data-i18n-aria="fiveStars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote data-i18n="reviewOne">“कटिंग बहुत बढ़िया हुई। बार्बर ने मेरी पसंद समझकर साफ़ फेड दिया।”</blockquote><footer><span class="review-avatar" aria-hidden="true">A</span><span data-i18n="reviewerA">अमन</span> <span class="english" data-i18n="sampleReview">· Sample review</span></footer></article>
+          <article class="review-card"><div class="stars" data-i18n-aria="fiveStars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote data-i18n="reviewTwo">“दाढ़ी की शेप एकदम सही की और टूल भी साफ़ थे। फिर आऊँगा।”</blockquote><footer><span class="review-avatar" aria-hidden="true">R</span><span data-i18n="reviewerR">रोहित</span> <span class="english" data-i18n="sampleReview">· Sample review</span></footer></article>
+          <article class="review-card"><div class="stars" data-i18n-aria="fiveStars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote data-i18n="reviewThree">“अच्छी सर्विस, सही दाम और बढ़िया स्टाइल। लोकल में अच्छी जगह है।”</blockquote><footer><span class="review-avatar" aria-hidden="true">V</span><span data-i18n="reviewerV">विकास</span> <span class="english" data-i18n="sampleReview">· Sample review</span></footer></article>
         </div>
       </div>
     </section>
@@ -290,12 +322,12 @@
       <div class="wrap reveal">
         <div class="payment-band">
           <div>
-            <p class="eyebrow">EASY PAYMENTS</p>
-            <h2 id="payments-title">भुगतान अपनी पसंद से करें</h2>
-            <p>Paytm / UPI / Cash accepted</p>
-            <p class="owner-note">Paytm पर नाम: <strong>Govind Kumar</strong></p>
+            <p class="eyebrow" data-i18n="paymentsEyebrow">EASY PAYMENTS</p>
+            <h2 id="payments-title" data-i18n="paymentsTitle">भुगतान अपनी पसंद से करें</h2>
+            <p data-i18n="paymentMethods">Paytm / UPI / Cash accepted</p>
+            <p class="owner-note"><span data-i18n="paytmName">Paytm पर नाम:</span> <strong>Govind Kumar</strong></p>
           </div>
-          <div class="payment-methods" aria-label="स्वीकार किए जाने वाले भुगतान">
+          <div class="payment-methods" data-i18n-aria="paymentMethodsAria" aria-label="स्वीकार किए जाने वाले भुगतान">
             <span class="payment-method"><span aria-hidden="true">▣</span> Paytm</span>
             <span class="payment-method"><span aria-hidden="true">↗</span> UPI</span>
             <span class="payment-method"><span aria-hidden="true">₹</span> Cash</span>
@@ -307,12 +339,12 @@
     <section class="section" id="location" aria-labelledby="location-title">
       <div class="wrap reveal">
         <div class="section-heading">
-          <div><p class="eyebrow">COME BY</p><h2 id="location-title">दुकान पर आइए <span>· Location & Hours</span></h2></div>
+          <div><p class="eyebrow" data-i18n="locationEyebrow">COME BY</p><h2 id="location-title"><span data-i18n="locationTitle">दुकान पर आइए</span></h2></div>
         </div>
         <div class="location-grid">
           <div class="location-panel">
-            <div class="location-row" data-address-row hidden><span class="location-icon" aria-hidden="true">⌖</span><div><h3>पता <span class="english">· Address</span></h3><p data-address></p></div></div>
-            <div class="location-row"><span class="location-icon" aria-hidden="true">◷</span><div><h3>खुलने का समय <span class="english">· Timings</span></h3><p data-hours>समय जानने के लिए कॉल करें</p></div></div>
+            <div class="location-row" data-address-row hidden><span class="location-icon" aria-hidden="true">⌖</span><div><h3 data-i18n="addressTitle">पता</h3><p data-address></p></div></div>
+            <div class="location-row"><span class="location-icon" aria-hidden="true">◷</span><div><h3 data-i18n="hoursTitle">खुलने का समय</h3><p data-hours>समय जानने के लिए कॉल करें</p></div></div>
           </div>
         </div>
       </div>
@@ -322,16 +354,16 @@
   <footer class="footer">
     <div class="wrap">
       <div class="footer-main">
-        <div class="footer-brand">कृष्णा हेयर सेलून<small>KRISHNA HAIR SALON</small></div>
+        <div class="footer-brand"><span data-salon-name>कृष्णा हेयर सेलून</span><small>KRISHNA HAIR SALON</small></div>
         <a class="footer-contact" data-call href="tel:+918800966984">☎ <span data-phone-display>88009 66984</span></a>
       </div>
-      <div class="footer-bottom"><span>© 2026 कृष्णा हेयर सेलून</span><span>आपका स्टाइल, हमारी जिम्मेदारी।</span></div>
+      <div class="footer-bottom"><span>© 2026 <span data-salon-name>कृष्णा हेयर सेलून</span></span><span data-i18n="footerTagline">आपका स्टाइल, हमारी जिम्मेदारी।</span></div>
     </div>
   </footer>
 
-  <nav class="mobile-bar" aria-label="जल्दी संपर्क करें">
-    <a class="button button-gold" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span> अभी कॉल करें</a>
-    <a class="button whatsapp" data-whatsapp href="https://wa.me/918800966984" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> WhatsApp बुक करें</a>
+  <nav class="mobile-bar" data-i18n-aria="quickContact" aria-label="जल्दी संपर्क करें">
+    <a class="button button-gold" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span> <span data-i18n="callNow">अभी कॉल करें</span></a>
+    <a class="button whatsapp" data-whatsapp href="https://wa.me/918800966984" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> <span data-i18n="bookWhatsAppShort">WhatsApp बुक करें</span></a>
   </nav>
 
   <dialog data-lightbox aria-label="स्टाइल फोटो">
@@ -350,9 +382,13 @@
       phone: "+918800966984",
       phoneDisplay: "88009 66984",
       owner: "Govind Kumar",
-      address: "",
+      address: "Hoshiyarpur, Gali No. 11, Noida Sector 51, Uttar Pradesh",
       timings: "समय जानने के लिए कॉल करें",
-      whatsappMessage: "नमस्ते, मुझे कृष्णा हेयर सेलून में अपॉइंटमेंट बुक करनी है।",
+      timingsEnglish: "Call for opening hours",
+      whatsappMessage: {
+        hi: "नमस्ते, मुझे कृष्णा हेयर सेलून में अपॉइंटमेंट बुक करनी है।",
+        en: "Hello, I would like to book an appointment at Krishna Hair Salon."
+      },
       heroImage: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1800&q=85&auto=format&fit=crop",
       services: [
         { icon: "✂", name: "कटिंग", english: "Haircut", price: 100 },
@@ -378,30 +414,129 @@
 
     document.body.classList.remove("no-js");
     const phoneDigits = SALON.phone.replace(/\D/g, "");
-    const whatsappHref = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(SALON.whatsappMessage)}`;
     document.querySelector("[data-hero-image]").src = SALON.heroImage;
 
     document.querySelectorAll("[data-call]").forEach((link) => { link.href = `tel:${SALON.phone}`; });
-    document.querySelectorAll("[data-whatsapp]").forEach((link) => { link.href = whatsappHref; });
     document.querySelectorAll("[data-phone-display]").forEach((node) => { node.textContent = SALON.phoneDisplay; });
     document.querySelector("[data-address]").textContent = SALON.address;
     document.querySelector("[data-address-row]").hidden = SALON.address.trim() === "";
-    document.querySelector("[data-hours]").textContent = SALON.timings;
-
     // EDIT PRICES HERE: change the price values in SALON.services above.
-    document.querySelector("[data-services]").innerHTML = SALON.services.map((service) => `
-      <article class="service-card">
-        <span class="service-icon" aria-hidden="true">${service.icon}</span>
-        <h3>${service.name}<small>${service.english}</small></h3>
-        <span class="service-price">₹${service.price}</span>
-      </article>`).join("");
-
+    const serviceGrid = document.querySelector("[data-services]");
     const gallery = document.querySelector("[data-gallery]");
-    gallery.innerHTML = SALON.images.map((image, index) => `
-      <button class="gallery-item" type="button" data-image-index="${index}" aria-label="${image.title} की बड़ी फोटो देखें">
-        <img src="${image.src}" alt="${image.alt}" width="900" height="1100" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-broken')">
-        <span class="image-caption">${image.title}<small>${image.english}</small></span>
-      </button>`).join("");
+    let currentLanguage = "hi";
+
+    const translations = {
+      hi: {
+        pageTitle: "कृष्णा हेयर सेलून | Krishna Hair Salon",
+        pageDescription: "कृष्णा हेयर सेलून, नोएडा सेक्टर 51 में पुरुषों के हेयरकट, फेड, दाढ़ी सेटिंग और शेव के लिए आपका लोकल बार्बर।",
+        homeAria: "कृष्णा हेयर सेलून, होम", topCallAria: "अभी कृष्णा हेयर सेलून को कॉल करें",
+        heroLabel: "MEN'S GROOMING · आपका लोकल बार्बर",
+        tagline: "स्टाइल जो आपकी पहचान बने।",
+        heroCopy: "साफ़ कटिंग, शानदार फेड और दाढ़ी की बढ़िया सेटिंग।",
+        callNow: "अभी कॉल करें",
+        bookWhatsApp: "WhatsApp पर बुक करें",
+        bookWhatsAppShort: "WhatsApp बुक करें",
+        heroPointOne: "बढ़िया स्टाइल", heroPointTwo: "साफ़-सुथरे टूल", heroPointThree: "सही दाम",
+        servicesEyebrow: "THE MENU", servicesTitle: "सेवाएँ और दाम", servicesLead: "सीधी बात, साफ़ रेट।",
+        galleryEyebrow: "FRESH CUTS", galleryTitle: "हमारे स्टाइल", galleryLead: "अपनी पसंद का स्टाइल चुनें, या बार्बर से सलाह लें।",
+        whyEyebrow: "GOOD HANDS, GOOD STYLE", whyTitle: "क्यों आएँ हमारे पास?",
+        whyExperience: "अनुभवी बार्बर", whyExperienceText: "आपके चेहरे और पसंद के हिसाब से कटिंग।",
+        whyHygiene: "साफ़-सुथरे टूल", whyHygieneText: "हर ग्राहक के लिए साफ़ और तैयार औज़ार।",
+        whyTrends: "नए ट्रेंडिंग स्टाइल", whyTrendsText: "फेड से लेकर क्लासिक कट तक, आपकी पसंद।",
+        whyPrices: "बजट में बढ़िया लुक", whyPricesText: "पैसे के हिसाब से साफ़ और सही दाम।",
+        reviewsEyebrow: "KIND WORDS", reviewsTitle: "ग्राहक क्या कहते हैं", reviewsControls: "रिव्यू स्क्रॉल करें",
+        previousReview: "पिछले रिव्यू", nextReview: "अगले रिव्यू", reviewsList: "ग्राहकों के रिव्यू, साइड में स्वाइप करें",
+        fiveStars: "5 में से 5 सितारे", sampleReview: "· नमूना रिव्यू", reviewerA: "अमन", reviewerR: "रोहित", reviewerV: "विकास",
+        reviewOne: "“कटिंग बहुत बढ़िया हुई। बार्बर ने मेरी पसंद समझकर साफ़ फेड दिया।”",
+        reviewTwo: "“दाढ़ी की शेप एकदम सही की और टूल भी साफ़ थे। फिर आऊँगा।”",
+        reviewThree: "“अच्छी सर्विस, सही दाम और बढ़िया स्टाइल। लोकल में अच्छी जगह है।”",
+        paymentsEyebrow: "EASY PAYMENTS", paymentsTitle: "भुगतान अपनी पसंद से करें", paymentMethods: "Paytm / UPI / Cash accepted",
+        paytmName: "Paytm पर नाम:", paymentMethodsAria: "स्वीकार किए जाने वाले भुगतान",
+        locationEyebrow: "COME BY", locationTitle: "दुकान पर आइए", addressTitle: "पता", hoursTitle: "खुलने का समय",
+        footerTagline: "आपका स्टाइल, हमारी जिम्मेदारी।", quickContact: "जल्दी संपर्क करें",
+        galleryOpen: "बड़ी फोटो देखें", lightbox: "स्टाइल फोटो", closePhoto: "फोटो बंद करें"
+      },
+      en: {
+        pageTitle: "Krishna Hair Salon | Noida Sector 51",
+        pageDescription: "Krishna Hair Salon in Noida Sector 51 for men's haircuts, fades, beard styling and grooming.",
+        homeAria: "Krishna Hair Salon, home", topCallAria: "Call Krishna Hair Salon now",
+        heroLabel: "MEN'S GROOMING · YOUR LOCAL BARBER",
+        tagline: "A style that feels like you.",
+        heroCopy: "Sharp haircuts, clean fades and a beard shaped just right.",
+        callNow: "Call Now",
+        bookWhatsApp: "Book on WhatsApp",
+        bookWhatsAppShort: "Book on WhatsApp",
+        heroPointOne: "Sharp styles", heroPointTwo: "Clean tools", heroPointThree: "Fair prices",
+        servicesEyebrow: "THE MENU", servicesTitle: "Services & Prices", servicesLead: "Straightforward service. Clear prices.",
+        galleryEyebrow: "FRESH CUTS", galleryTitle: "The Looks", galleryLead: "Pick a style you like, or ask your barber for advice.",
+        whyEyebrow: "GOOD HANDS, GOOD STYLE", whyTitle: "Why Choose Us?",
+        whyExperience: "Experienced barber", whyExperienceText: "A cut tailored to your face and preference.",
+        whyHygiene: "Clean tools", whyHygieneText: "Clean, ready-to-use tools for every customer.",
+        whyTrends: "Trending styles", whyTrendsText: "From fresh fades to timeless classic cuts.",
+        whyPrices: "Great style, fair price", whyPricesText: "Quality grooming at a price that makes sense.",
+        reviewsEyebrow: "KIND WORDS", reviewsTitle: "What Customers Say", reviewsControls: "Scroll reviews",
+        previousReview: "Previous review", nextReview: "Next review", reviewsList: "Customer reviews, swipe horizontally",
+        fiveStars: "5 out of 5 stars", sampleReview: "· Sample review", reviewerA: "Aman", reviewerR: "Rohit", reviewerV: "Vikas",
+        reviewOne: "“Loved the haircut. The barber understood what I wanted and gave me a clean fade.”",
+        reviewTwo: "“The beard shape was spot on and the tools were clean. I will be back.”",
+        reviewThree: "“Good service, fair prices and a great style. A nice local salon.”",
+        paymentsEyebrow: "EASY PAYMENTS", paymentsTitle: "Pay your way", paymentMethods: "Paytm / UPI / Cash accepted",
+        paytmName: "Paytm account name:", paymentMethodsAria: "Accepted payment methods",
+        locationEyebrow: "COME BY", locationTitle: "Visit the Salon", addressTitle: "Address", hoursTitle: "Opening Hours",
+        footerTagline: "Your style, our care.", quickContact: "Quick contact",
+        galleryOpen: "View larger photo", lightbox: "Style photo", closePhoto: "Close photo"
+      }
+    };
+
+    const renderServices = () => {
+      serviceGrid.innerHTML = SALON.services.map((service) => `
+        <article class="service-card">
+          <span class="service-icon" aria-hidden="true">${service.icon}</span>
+          <h3>${currentLanguage === "hi" ? service.name : service.english}</h3>
+          <span class="service-price">₹${service.price}</span>
+        </article>`).join("");
+    };
+
+    const renderGallery = () => {
+      gallery.innerHTML = SALON.images.map((image, index) => {
+        const title = currentLanguage === "hi" ? image.title : image.english;
+        const alt = currentLanguage === "hi" ? image.alt : `${image.english.toLowerCase()} men's hairstyle`;
+        return `
+          <button class="gallery-item" type="button" data-image-index="${index}" aria-label="${title}: ${translations[currentLanguage].galleryOpen}">
+            <img src="${image.src}" alt="${alt}" width="900" height="1100" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-broken')">
+            <span class="image-caption">${title}</span>
+          </button>`;
+      }).join("");
+    };
+
+    const setLanguage = (language) => {
+      currentLanguage = language;
+      const copy = translations[language];
+      document.documentElement.lang = language;
+      document.title = copy.pageTitle;
+      document.querySelector('meta[name="description"]').content = copy.pageDescription;
+      document.querySelector('meta[property="og:title"]').content = copy.pageTitle;
+      document.querySelector('meta[property="og:description"]').content = copy.pageDescription;
+      document.querySelector('meta[property="og:locale"]').content = language === "hi" ? "hi_IN" : "en_IN";
+      document.querySelectorAll("[data-i18n]").forEach((node) => { node.textContent = copy[node.dataset.i18n]; });
+      document.querySelectorAll("[data-i18n-aria]").forEach((node) => { node.setAttribute("aria-label", copy[node.dataset.i18nAria]); });
+      document.querySelectorAll("[data-salon-name]").forEach((node) => { node.textContent = language === "hi" ? SALON.nameHi : SALON.nameEn; });
+      document.querySelectorAll("[data-language]").forEach((button) => { button.setAttribute("aria-pressed", String(button.dataset.language === language)); });
+      document.querySelector("[data-hours]").textContent = language === "hi" ? SALON.timings : SALON.timingsEnglish;
+      document.querySelector("[data-lightbox]").setAttribute("aria-label", copy.lightbox);
+      document.querySelector("[data-lightbox-close]").setAttribute("aria-label", copy.closePhoto);
+      document.querySelectorAll("[data-phone-display]").forEach((node) => { node.textContent = SALON.phoneDisplay; });
+      document.querySelectorAll("[data-whatsapp]").forEach((link) => {
+        link.href = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(SALON.whatsappMessage[language])}`;
+      });
+      renderServices();
+      renderGallery();
+    };
+
+    document.querySelectorAll("[data-language]").forEach((button) => {
+      button.addEventListener("click", () => setLanguage(button.dataset.language));
+    });
+    setLanguage("hi");
 
     const structuredData = {
       "@context": "https://schema.org",
@@ -431,8 +566,8 @@
       const image = SALON.images[Number(button.dataset.imageIndex)];
       lightboxImage.src = image.src.replace(/w=900/, "w=1600");
       lightboxImage.style.display = "block";
-      lightboxImage.alt = image.alt;
-      document.querySelector("[data-lightbox-caption]").textContent = `${image.title} · ${image.english}`;
+      lightboxImage.alt = currentLanguage === "hi" ? image.alt : `${image.english.toLowerCase()} men's grooming style`;
+      document.querySelector("[data-lightbox-caption]").textContent = currentLanguage === "hi" ? image.title : image.english;
       lightbox.showModal();
     });
     document.querySelector("[data-lightbox-close]").addEventListener("click", () => lightbox.close());
