@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="कृष्णा हेयर सेलून, पुरुषों के हेयरकट, फेड, दाढ़ी सेटिंग और शेव के लिए आपका लोकल बार्बर। Krishna Hair Salon for men's haircut, fade, beard styling and grooming.">
+  <meta property="og:type" content="business.business">
+  <meta property="og:title" content="कृष्णा हेयर सेलून | Krishna Hair Salon">
+  <meta property="og:description" content="स्टाइल जो आपकी पहचान बने। कटिंग, फेड और दाढ़ी सेटिंग के लिए आज ही कॉल करें।">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1200&q=80&auto=format&fit=crop">
+  <meta property="og:locale" content="hi_IN">
+  <title>कृष्णा हेयर सेलून | Krishna Hair Salon</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='82'%3E%E2%9C%82%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #0b0b0c;
+      --panel: #121214;
+      --panel-light: #19191b;
+      --line: rgba(255, 255, 255, .11);
+      --text: #f7f5ef;
+      --muted: #aaa8a1;
+      --gold: #f5b700;
+      --gold-bright: #ffdc53;
+      --green: #25d366;
+      --hindi: "Noto Sans Devanagari", "Mukta", sans-serif;
+      --english: "Poppins", "Inter", sans-serif;
+      --display: "Poppins", "Inter", sans-serif;
+      --page-width: 1180px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--ink);
+      font-family: var(--hindi), var(--english);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    body, button, a { -webkit-tap-highlight-color: transparent; }
+    a { color: inherit; text-decoration: none; }
+    button { color: inherit; font: inherit; }
+    img { display: block; max-width: 100%; }
+    :focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 4px; }
+    .wrap { width: min(calc(100% - 40px), var(--page-width)); margin-inline: auto; }
+    .english { font-family: var(--english); }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 12px;
+      color: var(--gold);
+      font-family: var(--english);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.7px;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 22px; height: 1px; background: var(--gold); content: ""; }
+    .section { padding: 76px 0; border-top: 1px solid rgba(255, 255, 255, .055); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 28px; }
+    .section-heading h2 { margin: 0; font-size: clamp(27px, 7vw, 42px); font-weight: 700; line-height: 1.2; }
+    .section-heading h2 span { color: var(--muted); font-family: var(--english); font-size: .58em; font-weight: 500; }
+    .section-heading p { max-width: 410px; margin: 0; color: var(--muted); font-size: 14px; }
+
+    .topbar { position: absolute; z-index: 3; inset: 0 0 auto; border-bottom: 1px solid rgba(255,255,255,.13); }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 14px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 0; }
+    .brand-mark { display: grid; flex: 0 0 42px; width: 42px; height: 42px; place-items: center; border: 1px solid var(--gold); color: var(--gold); font-size: 23px; }
+    .brand-name { display: block; font-size: 14px; font-weight: 700; line-height: 1.35; }
+    .brand-name small { display: block; color: #c8c5bc; font-family: var(--english); font-size: 10px; font-weight: 500; }
+    .top-phone { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 13px; border: 1px solid rgba(245,183,0,.7); color: var(--gold-bright); font-family: var(--english); font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .top-phone span { margin-right: 7px; font-size: 16px; }
+
+    .hero { position: relative; display: flex; min-height: 710px; align-items: center; overflow: hidden; isolation: isolate; background: #131313; }
+    .hero-photo { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 58% 38%; }
+    .hero::before { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(8,8,9,.98) 0%, rgba(8,8,9,.89) 37%, rgba(8,8,9,.47) 72%, rgba(8,8,9,.48) 100%), linear-gradient(0deg, var(--ink) 0%, transparent 30%, rgba(0,0,0,.18) 100%); content: ""; }
+    .hero-content { width: min(calc(100% - 40px), var(--page-width)); margin: 112px auto 74px; }
+    .hero-label { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 19px; padding: 7px 11px; border: 1px solid rgba(245,183,0,.34); background: rgba(11,11,12,.5); color: #f2e4bd; font-size: 12px; }
+    .hero-label i { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 12px rgba(245,183,0,.75); }
+    .hero h1 { max-width: 750px; margin: 0; background: linear-gradient(100deg, #fff1b4 1%, #f5b700 51%, #d79200 100%); background-clip: text; color: transparent; font-size: clamp(43px, 10vw, 82px); font-weight: 800; line-height: 1.15; text-wrap: balance; -webkit-background-clip: text; }
+    .hero h1 small { display: block; margin-top: 8px; color: rgba(255,255,255,.91); font-family: var(--display); font-size: clamp(19px, 5vw, 30px); font-weight: 600; }
+    .hero-copy { max-width: 520px; margin: 20px 0 27px; color: #dedbd3; font-size: clamp(16px, 4vw, 19px); }
+    .hero-copy strong { color: #fff; font-weight: 600; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 9px; padding: 0 19px; border: 1px solid transparent; font-size: 14px; font-weight: 700; transition: transform .2s ease, background-color .2s ease, border-color .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button-gold { background: var(--gold); color: #17130a; }
+    .button-gold:hover { background: var(--gold-bright); }
+    .button-ghost { border-color: rgba(255,255,255,.46); background: rgba(12,12,12,.3); color: white; }
+    .button-ghost:hover { border-color: var(--gold); }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 34px; color: #d5d2cb; font-size: 12px; }
+    .hero-note b { color: var(--gold); font-family: var(--english); font-size: 14px; }
+    .hero-note span { width: 1px; height: 17px; background: rgba(255,255,255,.35); }
+
+    .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .service-card { position: relative; min-height: 145px; padding: 17px 15px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(145deg, #171719, #101011); transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+    .service-card:hover { transform: translateY(-3px); border-color: rgba(245,183,0,.65); background: #19191b; }
+    .service-icon { display: grid; width: 39px; height: 39px; margin-bottom: 12px; place-items: center; border: 1px solid rgba(245,183,0,.26); background: rgba(245,183,0,.09); font-size: 20px; }
+    .service-card h3 { margin: 0; font-size: 15px; line-height: 1.4; }
+    .service-card h3 small { display: block; margin-top: 2px; color: var(--muted); font-family: var(--english); font-size: 11px; font-weight: 500; }
+    .service-price { display: block; margin-top: 10px; color: var(--gold-bright); font-family: var(--english); font-size: 16px; font-weight: 700; }
+
+    .gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .gallery-item { position: relative; min-width: 0; aspect-ratio: 1 / 1.17; padding: 0; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(145deg, #292316, #151515 55%, #3d300e); cursor: zoom-in; text-align: left; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease, opacity .2s ease; }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item .image-caption { position: absolute; inset: auto 0 0; padding: 34px 12px 11px; background: linear-gradient(transparent, rgba(0,0,0,.9)); color: #fff; font-size: 13px; font-weight: 600; }
+    .gallery-item .image-caption small { display: block; color: var(--gold-bright); font-family: var(--english); font-size: 10px; font-weight: 600; }
+    .gallery-item.is-broken img { display: none; }
+
+    .why-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 13px; }
+    .why-item { display: grid; grid-template-columns: 46px 1fr; align-items: start; gap: 12px; }
+    .why-icon { display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid rgba(245,183,0,.28); color: var(--gold); font-size: 20px; }
+    .why-item h3 { margin: 1px 0 4px; font-size: 15px; }
+    .why-item p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+
+    .review-heading { margin-bottom: 23px; }
+    .carousel-controls { display: flex; gap: 8px; }
+    .carousel-controls button { display: grid; width: 42px; height: 42px; place-items: center; border: 1px solid var(--line); background: var(--panel); color: var(--gold); cursor: pointer; font-size: 20px; }
+    .carousel-controls button:hover { border-color: var(--gold); }
+    .reviews { display: grid; grid-auto-columns: minmax(260px, 82%); grid-auto-flow: column; gap: 12px; overflow-x: auto; overscroll-behavior-inline: contain; padding-bottom: 9px; scroll-snap-type: x mandatory; scrollbar-color: #504014 transparent; scrollbar-width: thin; }
+    .review-card { min-height: 190px; padding: 19px; border: 1px solid var(--line); background: linear-gradient(145deg, #19191b, #101011); scroll-snap-align: start; }
+    .stars { color: var(--gold); font-family: var(--english); font-size: 15px; letter-spacing: 1px; }
+    .review-card blockquote { margin: 12px 0 17px; color: #e9e6df; font-size: 14px; line-height: 1.7; }
+    .review-card footer { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 12px; }
+    .review-avatar { display: grid; width: 31px; height: 31px; place-items: center; border-radius: 50%; background: rgba(245,183,0,.15); color: var(--gold-bright); font-weight: 700; }
+
+    .payment-band { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 23px; border: 1px solid rgba(245,183,0,.28); background: radial-gradient(ellipse at 100% 0%, rgba(245,183,0,.11), transparent 52%), #121213; }
+    .payment-band h2 { margin: 0 0 4px; font-size: 22px; }
+    .payment-band p { margin: 0; color: var(--muted); font-size: 13px; }
+    .payment-methods { display: flex; flex-wrap: wrap; gap: 9px; }
+    .payment-method { display: inline-flex; min-height: 43px; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid var(--line); background: rgba(0,0,0,.24); font-family: var(--english); font-size: 12px; font-weight: 600; }
+    .payment-method span { color: var(--gold); font-size: 18px; }
+    .owner-note { margin-top: 13px !important; color: #d3c7a5 !important; font-size: 12px !important; }
+
+    .location-grid { display: grid; gap: 22px; }
+    .location-panel { padding: 21px; border: 1px solid var(--line); background: var(--panel); }
+    .location-row { display: grid; grid-template-columns: 41px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .location-row:first-child { padding-top: 0; }
+    .location-row:last-of-type { border-bottom: 0; }
+    .location-icon { display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgba(245,183,0,.25); color: var(--gold); font-size: 18px; }
+    .location-row h3 { margin: 0; font-size: 14px; }
+    .location-row p { margin: 3px 0 0; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
+    .location-panel .button { width: 100%; margin-top: 10px; }
+    .location-art { position: relative; min-height: 245px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(0deg, rgba(9,9,10,.78), rgba(9,9,10,.1)), var(--location-image) center 54% / cover, #24211a; }
+    .location-art::before, .location-art::after { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 36px 36px; content: ""; mask-image: linear-gradient(transparent, #000); }
+    .location-pin { position: absolute; top: 45%; left: 50%; display: grid; width: 56px; height: 56px; place-items: center; border: 1px solid var(--gold); border-radius: 50% 50% 50% 4px; background: rgba(11,11,12,.85); color: var(--gold); font-size: 22px; transform: translate(-50%, -50%) rotate(-45deg); }
+    .location-pin span { transform: rotate(45deg); }
+    .location-art-label { position: absolute; right: 15px; bottom: 13px; left: 15px; color: #fff; font-size: 13px; text-shadow: 0 1px 8px #000; }
+    .location-art-label small { display: block; color: var(--gold-bright); font-family: var(--english); font-size: 10px; }
+
+    .footer { padding: 30px 0 94px; border-top: 1px solid var(--line); background: #09090a; }
+    .footer-main { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
+    .footer-brand { color: var(--gold-bright); font-size: 17px; font-weight: 700; }
+    .footer-brand small { display: block; color: var(--muted); font-family: var(--english); font-size: 11px; font-weight: 500; }
+    .footer-contact { color: #ddd9d0; font-family: var(--english); font-size: 13px; }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 9px; margin-top: 22px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.08); color: #88867f; font-size: 11px; }
+
+    .mobile-bar { position: fixed; z-index: 10; inset: auto 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 9px; padding: 9px max(12px, env(safe-area-inset-right)) calc(9px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left)); border-top: 1px solid rgba(255,255,255,.14); background: rgba(10,10,11,.95); backdrop-filter: blur(16px); }
+    .mobile-bar .button { min-height: 49px; padding: 0 10px; font-size: 13px; }
+    .whatsapp { background: var(--green); color: #07170d; }
+    .whatsapp:hover { background: #48e17f; }
+
+    dialog { width: min(92vw, 1050px); max-width: none; max-height: 88dvh; padding: 0; overflow: visible; border: 1px solid rgba(255,255,255,.2); background: radial-gradient(ellipse at top, #292316, #111 70%); }
+    dialog::backdrop { background: rgba(0,0,0,.88); backdrop-filter: blur(5px); }
+    .lightbox-image { width: 100%; max-height: 80dvh; object-fit: contain; background: #0b0b0c; }
+    .lightbox-caption { padding: 10px 14px; color: #e6e1d5; font-size: 13px; }
+    .lightbox-close { position: absolute; top: -15px; right: -10px; display: grid; width: 44px; height: 44px; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: #111; color: white; cursor: pointer; font-size: 22px; }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .no-js .reveal { opacity: 1; transform: none; }
+    @media (min-width: 700px) {
+      .wrap { width: min(calc(100% - 64px), var(--page-width)); }
+      .hero { min-height: 760px; }
+      .hero-content { width: min(calc(100% - 64px), var(--page-width)); margin-top: 126px; }
+      .hero::before { background: linear-gradient(90deg, rgba(8,8,9,.97) 0%, rgba(8,8,9,.83) 40%, rgba(8,8,9,.2) 82%, rgba(8,8,9,.15) 100%), linear-gradient(0deg, var(--ink), transparent 25%); }
+      .section { padding: 94px 0; }
+      .service-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 13px; }
+      .service-card { min-height: 174px; padding: 20px; }
+      .gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+      .gallery-item { aspect-ratio: 1 / 1.02; }
+      .why-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+      .why-item { grid-template-columns: 1fr; gap: 12px; }
+      .reviews { grid-auto-columns: minmax(290px, 1fr); grid-auto-flow: initial; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
+      .payment-band { grid-template-columns: 1fr auto; align-items: center; padding: 27px 30px; }
+      .location-grid { grid-template-columns: .86fr 1.14fr; align-items: stretch; }
+      .location-art { min-height: 100%; }
+      .footer { padding-bottom: 30px; }
+      .mobile-bar { display: none; }
+    }
+    @media (min-width: 1000px) {
+      .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .hero { min-height: 800px; }
+      .hero h1 { max-width: 810px; }
+      .location-art { min-height: 350px; }
+    }
+    @media (max-width: 380px) {
+      .wrap, .hero-content { width: min(calc(100% - 32px), var(--page-width)); }
+      .topbar-inner { min-height: 66px; }
+      .top-phone { min-height: 42px; padding-inline: 9px; font-size: 12px; }
+      .hero { min-height: 690px; }
+      .hero-actions .button { flex: 1 1 100%; }
+      .section { padding: 63px 0; }
+      .service-card { padding: 14px 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="no-js">
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#home" aria-label="कृष्णा हेयर सेलून, होम">
+        <span class="brand-mark" aria-hidden="true">✂</span>
+        <span class="brand-name">कृष्णा हेयर सेलून<small>KRISHNA HAIR SALON</small></span>
+      </a>
+      <a class="top-phone" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span><span data-phone-display>88009 66984</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-photo" data-hero-image alt="बार्बर ग्राहक के बालों को नया फेड स्टाइल दे रहा है" width="1800" height="1200" fetchpriority="high" onerror="this.style.display='none'">
+      <div class="hero-content">
+        <div class="hero-label"><i aria-hidden="true"></i><span>MEN'S GROOMING · आपका लोकल बार्बर</span></div>
+        <h1 id="hero-title">कृष्णा हेयर सेलून<small>Krishna Hair Salon</small></h1>
+        <p class="hero-copy"><strong>स्टाइल जो आपकी पहचान बने।</strong><br>साफ़ कटिंग, शानदार फेड और दाढ़ी की बढ़िया सेटिंग।</p>
+        <div class="hero-actions">
+          <a class="button button-gold" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span> अभी कॉल करें</a>
+          <a class="button button-ghost" data-whatsapp href="https://wa.me/918800966984" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> WhatsApp पर बुक करें</a>
+        </div>
+        <div class="hero-note"><b>✦</b> बढ़िया स्टाइल <span></span> साफ़-सुथरे टूल <span></span> सही दाम</div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="wrap reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE MENU</p><h2 id="services-title">सेवाएँ और दाम <span>· Services & Prices</span></h2></div>
+          <p class="english">सीधी बात, साफ़ रेट।</p>
+        </div>
+        <div class="service-grid" data-services></div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery" aria-labelledby="gallery-title">
+      <div class="wrap reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">FRESH CUTS</p><h2 id="gallery-title">हमारे स्टाइल <span>· The Looks</span></h2></div>
+          <p>अपनी पसंद का स्टाइल चुनें, या बार्बर से सलाह लें।</p>
+        </div>
+        <div class="gallery" data-gallery></div>
+      </div>
+    </section>
+
+    <section class="section" id="why-us" aria-labelledby="why-title">
+      <div class="wrap reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">GOOD HANDS, GOOD STYLE</p><h2 id="why-title">क्यों आएँ हमारे पास? <span>· Why Us</span></h2></div>
+        </div>
+        <div class="why-grid">
+          <article class="why-item"><span class="why-icon" aria-hidden="true">✂</span><div><h3>अनुभवी बार्बर</h3><p>आपके चेहरे और पसंद के हिसाब से कटिंग।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">✦</span><div><h3>साफ़-सुथरे टूल</h3><p>हर ग्राहक के लिए साफ़ और तैयार औज़ार।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">◈</span><div><h3>नए ट्रेंडिंग स्टाइल</h3><p>फेड से लेकर क्लासिक कट तक, आपकी पसंद।</p></div></article>
+          <article class="why-item"><span class="why-icon" aria-hidden="true">₹</span><div><h3>बजट में बढ़िया लुक</h3><p>पैसे के हिसाब से साफ़ और सही दाम।</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reviews" aria-labelledby="reviews-title">
+      <div class="wrap reveal">
+        <div class="section-heading review-heading">
+          <div><p class="eyebrow">KIND WORDS</p><h2 id="reviews-title">ग्राहक क्या कहते हैं <span>· Reviews</span></h2></div>
+          <div class="carousel-controls" aria-label="रिव्यू स्क्रॉल करें">
+            <button type="button" data-review-prev aria-label="पिछले रिव्यू">‹</button>
+            <button type="button" data-review-next aria-label="अगले रिव्यू">›</button>
+          </div>
+        </div>
+        <div class="reviews" data-reviews tabindex="0" aria-label="ग्राहकों के रिव्यू, साइड में स्वाइप करें">
+          <article class="review-card"><div class="stars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote>“कटिंग बहुत बढ़िया हुई। बार्बर ने मेरी पसंद समझकर साफ़ फेड दिया।”</blockquote><footer><span class="review-avatar" aria-hidden="true">A</span><span>अमन <span class="english">· Sample review</span></span></footer></article>
+          <article class="review-card"><div class="stars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote>“दाढ़ी की शेप एकदम सही की और टूल भी साफ़ थे। फिर आऊँगा।”</blockquote><footer><span class="review-avatar" aria-hidden="true">R</span><span>रोहित <span class="english">· Sample review</span></span></footer></article>
+          <article class="review-card"><div class="stars" aria-label="5 में से 5 सितारे">★★★★★</div><blockquote>“अच्छी सर्विस, सही दाम और बढ़िया स्टाइल। लोकल में अच्छी जगह है।”</blockquote><footer><span class="review-avatar" aria-hidden="true">V</span><span>विकास <span class="english">· Sample review</span></span></footer></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="payments" aria-labelledby="payments-title">
+      <div class="wrap reveal">
+        <div class="payment-band">
+          <div>
+            <p class="eyebrow">EASY PAYMENTS</p>
+            <h2 id="payments-title">भुगतान अपनी पसंद से करें</h2>
+            <p>Paytm / UPI / Cash accepted</p>
+            <p class="owner-note">Paytm पर नाम: <strong>Govind Kumar</strong></p>
+          </div>
+          <div class="payment-methods" aria-label="स्वीकार किए जाने वाले भुगतान">
+            <span class="payment-method"><span aria-hidden="true">▣</span> Paytm</span>
+            <span class="payment-method"><span aria-hidden="true">↗</span> UPI</span>
+            <span class="payment-method"><span aria-hidden="true">₹</span> Cash</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="location" aria-labelledby="location-title">
+      <div class="wrap reveal">
+        <div class="section-heading">
+          <div><p class="eyebrow">COME BY</p><h2 id="location-title">दुकान पर आइए <span>· Location & Hours</span></h2></div>
+        </div>
+        <div class="location-grid">
+          <div class="location-panel">
+            <div class="location-row"><span class="location-icon" aria-hidden="true">⌖</span><div><h3>पता <span class="english">· Address</span></h3><p data-address>पता दुकान पर पूछें</p></div></div>
+            <div class="location-row"><span class="location-icon" aria-hidden="true">◷</span><div><h3>खुलने का समय <span class="english">· Timings</span></h3><p data-hours>समय जानने के लिए कॉल करें</p></div></div>
+            <a class="button button-gold" data-directions href="https://www.google.com/maps/search/?api=1&amp;query=Krishna+Hair+Salon" target="_blank" rel="noopener"><span aria-hidden="true">↗</span> Google Maps पर रास्ता देखें</a>
+          </div>
+          <div class="location-art" role="img" aria-label="बार्बर शॉप के अंदर की तस्वीर">
+            <span class="location-pin" aria-hidden="true"><span>✂</span></span>
+            <div class="location-art-label">कृष्णा हेयर सेलून<small>KRISHNA HAIR SALON · INDIA</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-main">
+        <div class="footer-brand">कृष्णा हेयर सेलून<small>KRISHNA HAIR SALON</small></div>
+        <a class="footer-contact" data-call href="tel:+918800966984">☎ <span data-phone-display>88009 66984</span></a>
+      </div>
+      <div class="footer-bottom"><span>© 2026 कृष्णा हेयर सेलून</span><span>आपका स्टाइल, हमारी जिम्मेदारी।</span></div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="जल्दी संपर्क करें">
+    <a class="button button-gold" data-call href="tel:+918800966984"><span aria-hidden="true">☎</span> अभी कॉल करें</a>
+    <a class="button whatsapp" data-whatsapp href="https://wa.me/918800966984" target="_blank" rel="noopener"><span aria-hidden="true">◉</span> WhatsApp बुक करें</a>
+  </nav>
+
+  <dialog data-lightbox aria-label="स्टाइल फोटो">
+    <button class="lightbox-close" type="button" data-lightbox-close aria-label="फोटो बंद करें">×</button>
+    <img class="lightbox-image" data-lightbox-image src="" alt="" width="1600" height="1200" loading="lazy" onerror="this.style.display='none'">
+    <div class="lightbox-caption" data-lightbox-caption></div>
+  </dialog>
+
+  <!-- EDIT PRICES HERE -->
+  <!-- Owner edits: phone, address, hours, prices and photos live together below. -->
+  <script>
+    // EDIT THIS CONFIGURATION: update shop details, service prices and image URLs here.
+    const SALON = {
+      nameHi: "कृष्णा हेयर सेलून",
+      nameEn: "Krishna Hair Salon",
+      phone: "+918800966984",
+      phoneDisplay: "88009 66984",
+      owner: "Govind Kumar",
+      address: "पता दुकान पर पूछें",
+      timings: "समय जानने के लिए कॉल करें",
+      whatsappMessage: "नमस्ते, मुझे कृष्णा हेयर सेलून में अपॉइंटमेंट बुक करनी है।",
+      heroImage: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1800&q=85&auto=format&fit=crop",
+      locationImage: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=75&auto=format&fit=crop",
+      services: [
+        { icon: "✂", name: "कटिंग", english: "Haircut", price: 100 },
+        { icon: "◈", name: "फेड / स्टाइलिंग", english: "Fade / Styling", price: 150 },
+        { icon: "♧", name: "दाढ़ी सेट", english: "Beard Trim & Shape", price: 50 },
+        { icon: "⌁", name: "क्लीन शेव", english: "Clean Shave", price: 50 },
+        { icon: "✦", name: "हेयर कलर", english: "Hair Colour", price: 250 },
+        { icon: "◉", name: "चंपी", english: "Head Massage", price: 100 },
+        { icon: "✧", name: "फेशियल / क्लीनअप", english: "Facial / Cleanup", price: 300 },
+        { icon: "〰", name: "हेयर स्पा", english: "Hair Spa", price: 400 }
+      ],
+      images: [
+        { src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=900&q=80&auto=format&fit=crop", alt: "बार्बर ग्राहक के बालों पर फेड स्टाइल बना रहा है", title: "क्लीन फेड", english: "CLEAN FADE" },
+        { src: "https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=900&q=80&auto=format&fit=crop", alt: "टेक्सचर्ड बालों के साथ शॉर्ट फेड हेयरकट", title: "टेक्सचर्ड कट", english: "TEXTURED CUT" },
+        { src: "https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?w=900&q=80&auto=format&fit=crop", alt: "साइड फेड के साथ पोम्पाडोर हेयरस्टाइल", title: "पोम्पाडोर", english: "POMPADOUR" },
+        { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop", alt: "बार्बर ग्राहक की दाढ़ी और किनारों को संवार रहा है", title: "दाढ़ी शेप", english: "BEARD SHAPE" },
+        { src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop", alt: "ग्राहक के बालों में साफ़ लाइन डिजाइन बनाता बार्बर", title: "लाइन डिजाइन", english: "LINE DESIGN" },
+        { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop", alt: "क्लासिक कुर्सियों और शीशों वाला बार्बर शॉप इंटीरियर", title: "बार्बर शॉप", english: "THE BARBER SHOP" }
+      ]
+    };
+
+    document.body.classList.remove("no-js");
+    const phoneDigits = SALON.phone.replace(/\D/g, "");
+    const whatsappHref = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(SALON.whatsappMessage)}`;
+    document.querySelector("[data-hero-image]").src = SALON.heroImage;
+    document.querySelector(".location-art").style.setProperty("--location-image", `url("${SALON.locationImage}")`);
+
+    document.querySelectorAll("[data-call]").forEach((link) => { link.href = `tel:${SALON.phone}`; });
+    document.querySelectorAll("[data-whatsapp]").forEach((link) => { link.href = whatsappHref; });
+    document.querySelectorAll("[data-phone-display]").forEach((node) => { node.textContent = SALON.phoneDisplay; });
+    document.querySelector("[data-address]").textContent = SALON.address;
+    document.querySelector("[data-hours]").textContent = SALON.timings;
+
+    // EDIT PRICES HERE: change the price values in SALON.services above.
+    document.querySelector("[data-services]").innerHTML = SALON.services.map((service) => `
+      <article class="service-card">
+        <span class="service-icon" aria-hidden="true">${service.icon}</span>
+        <h3>${service.name}<small>${service.english}</small></h3>
+        <span class="service-price">₹${service.price}</span>
+      </article>`).join("");
+
+    const gallery = document.querySelector("[data-gallery]");
+    gallery.innerHTML = SALON.images.map((image, index) => `
+      <button class="gallery-item" type="button" data-image-index="${index}" aria-label="${image.title} की बड़ी फोटो देखें">
+        <img src="${image.src}" alt="${image.alt}" width="900" height="1100" loading="lazy" onerror="this.closest('.gallery-item').classList.add('is-broken')">
+        <span class="image-caption">${image.title}<small>${image.english}</small></span>
+      </button>`).join("");
+
+    const hasShopAddress = SALON.address.trim() !== "" && SALON.address !== "पता दुकान पर पूछें";
+    const directionsQuery = hasShopAddress ? `${SALON.nameEn} ${SALON.address}` : SALON.nameEn;
+    document.querySelector("[data-directions]").href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(directionsQuery)}`;
+
+    const structuredData = {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      name: `${SALON.nameHi} (${SALON.nameEn})`,
+      telephone: SALON.phone,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: SALON.address,
+        addressCountry: "IN"
+      },
+      priceRange: "₹₹",
+      paymentAccepted: "Cash, UPI, Paytm"
+    };
+    const jsonLd = document.createElement("script");
+    jsonLd.type = "application/ld+json";
+    jsonLd.textContent = JSON.stringify(structuredData);
+    document.head.append(jsonLd);
+
+    const lightbox = document.querySelector("[data-lightbox]");
+    const lightboxImage = document.querySelector("[data-lightbox-image]");
+    gallery.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-image-index]");
+      if (!button) return;
+      const image = SALON.images[Number(button.dataset.imageIndex)];
+      lightboxImage.src = image.src.replace(/w=900/, "w=1600");
+      lightboxImage.style.display = "block";
+      lightboxImage.alt = image.alt;
+      document.querySelector("[data-lightbox-caption]").textContent = `${image.title} · ${image.english}`;
+      lightbox.showModal();
+    });
+    document.querySelector("[data-lightbox-close]").addEventListener("click", () => lightbox.close());
+    lightbox.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        event.preventDefault();
+        lightbox.close();
+      }
+    });
+    lightbox.addEventListener("click", (event) => { if (event.target === lightbox) lightbox.close(); });
+
+    const reviews = document.querySelector("[data-reviews]");
+    document.querySelector("[data-review-prev]").addEventListener("click", () => reviews.scrollBy({ left: -reviews.clientWidth * .82, behavior: "smooth" }));
+    document.querySelector("[data-review-next]").addEventListener("click", () => reviews.scrollBy({ left: reviews.clientWidth * .82, behavior: "smooth" }));
+
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .1 });
+      document.querySelectorAll(".reveal").forEach((section) => revealObserver.observe(section));
+    } else {
+      document.querySelectorAll(".reveal").forEach((section) => section.classList.add("is-visible"));
+    }
+  </script>
+</body>
+</html>
