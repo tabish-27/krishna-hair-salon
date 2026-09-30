@@ -103,7 +103,7 @@
     .button-ghost:hover { border-color: var(--gold); }
     .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 34px; color: #d5d2cb; font-size: 12px; }
     .hero-note b { color: var(--gold); font-family: var(--english); font-size: 14px; }
-    .hero-note span { width: 1px; height: 17px; background: rgba(255,255,255,.35); }
+    .hero-note > span:empty { flex: 0 0 1px; width: 1px; height: 17px; background: rgba(255,255,255,.35); }
 
     .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
     .service-card { position: relative; min-height: 145px; padding: 17px 15px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(145deg, #171719, #101011); transition: border-color .2s ease, transform .2s ease, background .2s ease; }
@@ -383,8 +383,8 @@
       phoneDisplay: "88009 66984",
       owner: "Govind Kumar",
       address: "Hoshiyarpur, Gali No. 11, Noida Sector 51, Uttar Pradesh",
-      timings: "समय जानने के लिए कॉल करें",
-      timingsEnglish: "Call for opening hours",
+      timings: "सुबह 6:30 बजे से रात 10 बजे तक",
+      timingsEnglish: "6:30 AM – 10:00 PM",
       whatsappMessage: {
         hi: "नमस्ते, मुझे कृष्णा हेयर सेलून में अपॉइंटमेंट बुक करनी है।",
         en: "Hello, I would like to book an appointment at Krishna Hair Salon."
