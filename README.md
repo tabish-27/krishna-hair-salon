@@ -8,7 +8,7 @@ Open `index.html` and edit the `SALON` object near the bottom of the file:
 
 - `phone` is used for call and WhatsApp links. Keep the country code and digits, such as `+918800966984`.
 - `phoneDisplay` controls how the number looks on the page.
-- `address` and `timings` are shown in the location section. Replace the prompts with the real shop details before sharing the QR code. The Google Maps button automatically searches the salon name and updated address.
+- `address` and `timings` are shown in the location section. The address is currently blank and hidden; add the real shop address here when available.
 - `services` contains each service name, English label, and price. Change the `price` numbers in rupees. The list is also marked `<!-- EDIT PRICES HERE -->` in the HTML.
 - `images` contains the gallery image URL, alt text, and captions. Keep meaningful alt text when replacing photos.
 - `whatsappMessage` controls the prefilled booking message.
@@ -23,7 +23,7 @@ The three reviews are clearly labeled sample reviews. Replace them with real cus
 4. Preview a deployment: `vercel` and follow the prompts.
 5. Publish to production: `vercel --prod`.
 
-The production command prints the live URL. Open it on a phone and test Call, WhatsApp, directions, and the image gallery before printing the QR code.
+The production command prints the live URL. Open it on a phone and test Call, WhatsApp, and the image gallery before printing the QR code.
 
 ## Deploy from GitHub
 

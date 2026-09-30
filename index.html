@@ -141,7 +141,7 @@
     .payment-method span { color: var(--gold); font-size: 18px; }
     .owner-note { margin-top: 13px !important; color: #d3c7a5 !important; font-size: 12px !important; }
 
-    .location-grid { display: grid; gap: 22px; }
+    .location-grid { display: grid; max-width: 680px; gap: 22px; }
     .location-panel { padding: 21px; border: 1px solid var(--line); background: var(--panel); }
     .location-row { display: grid; grid-template-columns: 41px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
     .location-row:first-child { padding-top: 0; }
@@ -150,13 +150,6 @@
     .location-row h3 { margin: 0; font-size: 14px; }
     .location-row p { margin: 3px 0 0; color: var(--muted); font-size: 13px; overflow-wrap: anywhere; }
     .location-panel .button { width: 100%; margin-top: 10px; }
-    .location-art { position: relative; min-height: 245px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(0deg, rgba(9,9,10,.78), rgba(9,9,10,.1)), var(--location-image) center 54% / cover, #24211a; }
-    .location-art::before, .location-art::after { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 36px 36px; content: ""; mask-image: linear-gradient(transparent, #000); }
-    .location-pin { position: absolute; top: 45%; left: 50%; display: grid; width: 56px; height: 56px; place-items: center; border: 1px solid var(--gold); border-radius: 50% 50% 50% 4px; background: rgba(11,11,12,.85); color: var(--gold); font-size: 22px; transform: translate(-50%, -50%) rotate(-45deg); }
-    .location-pin span { transform: rotate(45deg); }
-    .location-art-label { position: absolute; right: 15px; bottom: 13px; left: 15px; color: #fff; font-size: 13px; text-shadow: 0 1px 8px #000; }
-    .location-art-label small { display: block; color: var(--gold-bright); font-family: var(--english); font-size: 10px; }
-
     .footer { padding: 30px 0 94px; border-top: 1px solid var(--line); background: #09090a; }
     .footer-main { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; }
     .footer-brand { color: var(--gold-bright); font-size: 17px; font-weight: 700; }
@@ -192,8 +185,7 @@
       .why-item { grid-template-columns: 1fr; gap: 12px; }
       .reviews { grid-auto-columns: minmax(290px, 1fr); grid-auto-flow: initial; grid-template-columns: repeat(3, minmax(0, 1fr)); overflow: visible; }
       .payment-band { grid-template-columns: 1fr auto; align-items: center; padding: 27px 30px; }
-      .location-grid { grid-template-columns: .86fr 1.14fr; align-items: stretch; }
-      .location-art { min-height: 100%; }
+      .location-grid { grid-template-columns: minmax(0, 1fr); }
       .footer { padding-bottom: 30px; }
       .mobile-bar { display: none; }
     }
@@ -201,7 +193,6 @@
       .gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       .hero { min-height: 800px; }
       .hero h1 { max-width: 810px; }
-      .location-art { min-height: 350px; }
     }
     @media (max-width: 380px) {
       .wrap, .hero-content { width: min(calc(100% - 32px), var(--page-width)); }
@@ -320,13 +311,8 @@
         </div>
         <div class="location-grid">
           <div class="location-panel">
-            <div class="location-row"><span class="location-icon" aria-hidden="true">⌖</span><div><h3>पता <span class="english">· Address</span></h3><p data-address>पता दुकान पर पूछें</p></div></div>
+            <div class="location-row" data-address-row hidden><span class="location-icon" aria-hidden="true">⌖</span><div><h3>पता <span class="english">· Address</span></h3><p data-address></p></div></div>
             <div class="location-row"><span class="location-icon" aria-hidden="true">◷</span><div><h3>खुलने का समय <span class="english">· Timings</span></h3><p data-hours>समय जानने के लिए कॉल करें</p></div></div>
-            <a class="button button-gold" data-directions href="https://www.google.com/maps/search/?api=1&amp;query=Krishna+Hair+Salon" target="_blank" rel="noopener"><span aria-hidden="true">↗</span> Google Maps पर रास्ता देखें</a>
-          </div>
-          <div class="location-art" role="img" aria-label="बार्बर शॉप के अंदर की तस्वीर">
-            <span class="location-pin" aria-hidden="true"><span>✂</span></span>
-            <div class="location-art-label">कृष्णा हेयर सेलून<small>KRISHNA HAIR SALON · INDIA</small></div>
           </div>
         </div>
       </div>
@@ -364,11 +350,10 @@
       phone: "+918800966984",
       phoneDisplay: "88009 66984",
       owner: "Govind Kumar",
-      address: "पता दुकान पर पूछें",
+      address: "",
       timings: "समय जानने के लिए कॉल करें",
       whatsappMessage: "नमस्ते, मुझे कृष्णा हेयर सेलून में अपॉइंटमेंट बुक करनी है।",
       heroImage: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1800&q=85&auto=format&fit=crop",
-      locationImage: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1000&q=75&auto=format&fit=crop",
       services: [
         { icon: "✂", name: "कटिंग", english: "Haircut", price: 100 },
         { icon: "◈", name: "फेड / स्टाइलिंग", english: "Fade / Styling", price: 150 },
@@ -385,7 +370,9 @@
         { src: "https://images.unsplash.com/photo-1622296089863-eb7fc530daa8?w=900&q=80&auto=format&fit=crop", alt: "साइड फेड के साथ पोम्पाडोर हेयरस्टाइल", title: "पोम्पाडोर", english: "POMPADOUR" },
         { src: "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80&auto=format&fit=crop", alt: "बार्बर ग्राहक की दाढ़ी और किनारों को संवार रहा है", title: "दाढ़ी शेप", english: "BEARD SHAPE" },
         { src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?w=900&q=80&auto=format&fit=crop", alt: "ग्राहक के बालों में साफ़ लाइन डिजाइन बनाता बार्बर", title: "लाइन डिजाइन", english: "LINE DESIGN" },
-        { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop", alt: "क्लासिक कुर्सियों और शीशों वाला बार्बर शॉप इंटीरियर", title: "बार्बर शॉप", english: "THE BARBER SHOP" }
+        { src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80&auto=format&fit=crop", alt: "क्लासिक कुर्सियों और शीशों वाला बार्बर शॉप इंटीरियर", title: "बार्बर शॉप", english: "THE BARBER SHOP" },
+        { src: "https://images.unsplash.com/photo-1532710093739-9470acff878f?w=900&q=80&auto=format&fit=crop", alt: "बार्बर ग्राहक की दाढ़ी पर शेविंग ब्रश से झाग लगा रहा है", title: "क्लीन शेव", english: "CLEAN SHAVE" },
+        { src: "https://images.unsplash.com/photo-1512690459411-b9245aed614b?w=900&q=80&auto=format&fit=crop", alt: "बार्बर शॉप में क्लासिक लेदर बार्बर चेयर", title: "क्लासिक चेयर", english: "THE BARBER CHAIR" }
       ]
     };
 
@@ -393,12 +380,12 @@
     const phoneDigits = SALON.phone.replace(/\D/g, "");
     const whatsappHref = `https://wa.me/${phoneDigits}?text=${encodeURIComponent(SALON.whatsappMessage)}`;
     document.querySelector("[data-hero-image]").src = SALON.heroImage;
-    document.querySelector(".location-art").style.setProperty("--location-image", `url("${SALON.locationImage}")`);
 
     document.querySelectorAll("[data-call]").forEach((link) => { link.href = `tel:${SALON.phone}`; });
     document.querySelectorAll("[data-whatsapp]").forEach((link) => { link.href = whatsappHref; });
     document.querySelectorAll("[data-phone-display]").forEach((node) => { node.textContent = SALON.phoneDisplay; });
     document.querySelector("[data-address]").textContent = SALON.address;
+    document.querySelector("[data-address-row]").hidden = SALON.address.trim() === "";
     document.querySelector("[data-hours]").textContent = SALON.timings;
 
     // EDIT PRICES HERE: change the price values in SALON.services above.
@@ -416,23 +403,21 @@
         <span class="image-caption">${image.title}<small>${image.english}</small></span>
       </button>`).join("");
 
-    const hasShopAddress = SALON.address.trim() !== "" && SALON.address !== "पता दुकान पर पूछें";
-    const directionsQuery = hasShopAddress ? `${SALON.nameEn} ${SALON.address}` : SALON.nameEn;
-    document.querySelector("[data-directions]").href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(directionsQuery)}`;
-
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "HairSalon",
       name: `${SALON.nameHi} (${SALON.nameEn})`,
       telephone: SALON.phone,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: SALON.address,
-        addressCountry: "IN"
-      },
       priceRange: "₹₹",
       paymentAccepted: "Cash, UPI, Paytm"
     };
+    if (SALON.address.trim()) {
+      structuredData.address = {
+        "@type": "PostalAddress",
+        streetAddress: SALON.address,
+        addressCountry: "IN"
+      };
+    }
     const jsonLd = document.createElement("script");
     jsonLd.type = "application/ld+json";
     jsonLd.textContent = JSON.stringify(structuredData);
